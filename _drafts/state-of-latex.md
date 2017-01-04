@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A survey of intermediate-advanced LaTeX typesetting
+title: Summary of the Current State of LaTeX
 category: Design
 tags: [tex]
 ---
