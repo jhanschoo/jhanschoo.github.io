@@ -182,20 +182,3 @@ auto-update from the CTAN (Comprehensive Tex Archive Network) mirrors.
 Being somewhat of a niche piece of software, CTAN packages do not
 often update as frequently as those in repositories for OSes,
 popular programming languages, etc.
-
-## 3. Which package? What settings?
-
-The last couple months I have been experimenting with using LaTeX to
-typeset very comprehensive summaries of certain textbooks and answers
-to their exercises for personal use. These documents have very
-interesting requirements, and I think that the decisions I have made
-are good choices and will help save time for the reader in a variety
-of use cases, especially those pertaining to literature, mathematics,
-and computer science.
-
-### Engine choice: XeTeX and LuaTeX
-
-In general, documents utilizing XeTeX/LuaTeX features are not
-compilable by the pdfTeX engine. XeTeX and LuaTeX provide native
-support for code in UTF-8. Traditional TeX/pdfTeX are nevertheless
-forward-compatible with XeTeX/LuaTeX.
