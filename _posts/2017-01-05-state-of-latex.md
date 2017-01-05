@@ -5,13 +5,10 @@ category: Design
 tags: [tex]
 ---
 
-This article will be structured in three parts. The first discusses
-reasons to use or not use LaTeX to typeset your document, the second
+This article will be structured in two parts. The first discusses
+reasons to use or not use LaTeX to typeset your document, while the second
 discusses the current discusses the current landscape of TeX engines,
-document typesetting systems, and distributions, and in the last, the
-meat of the article, I offer reasoned arguments on which packages
-choose and which settings to use among many competing alternatives to
-solve some of the problems and requirements that I've faced.
+document typesetting systems, and distributions.
 
 ## 1. Introduction: do you really need to use TeX?
 
@@ -185,3 +182,13 @@ auto-update from the CTAN (Comprehensive Tex Archive Network) mirrors.
 Being somewhat of a niche piece of software, CTAN packages do not
 often update as frequently as those in repositories for OSes,
 popular programming languages, etc.
+
+## Ending Note
+
+I hope this clarifies for the reader what the words and differences
+between TeX, LaTeX, ConTeXt, pdfTeX, XeTeX, LuaTeX, CTAN, etc. are,
+and gives an insight into the development history of the TeX
+ecosystem. If TeX is right for you, I encourage you to try out the
+newer engines and try out some novel customizations. To that end, I am
+writing a companion post which is an annotation of a template that I
+base my documents off.
