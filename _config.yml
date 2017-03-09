@@ -13,19 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: jhanschoo
+title: Τὰ εἰς ἑμαυτόν.
 email: jhanschoo AT gmail DOT com
 description: > # this means to ignore newlines until "baseurl:"
-  Johannes Choo's personal blog. For now. In general, you may expect general
-  topics related to programming, computer science, classical languages,
-  and to a lesser extent, mathematics, complexity, and linguistics.
+  Thoughts to myself—a personal blog by Johannes Choo.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "jhanschoo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jhanschoo
 github_username:  jhanschoo
+github_repo: jhanschoo.github.io
 
 # Build settings
 markdown: kramdown
+mathjax: true
 theme: minima
 gems:
   - jekyll-feed
