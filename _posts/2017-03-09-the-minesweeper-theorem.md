@@ -34,9 +34,9 @@ unrevealed squares beside
   respective uncovered squares.
 * Let \\(f_a\\) be the number of flagged squares around \\(a\\) and
   let \\(f_b\\) be the number of flagged squares around \\(b\\).
-* Let \\(n_a=a-f_a\\) be the number of unflagged but unrevealed
-  squares beside \\(A\\) but not beside \\(B\\). Likewise, let
-  \\(n_b=b-f_b\\).
+* Let \\(n_a=a-f_a\\) be the number of bombs in unflagged but
+  unrevealed squares beside \\(A\\) but not beside \\(B\\). Likewise,
+  let \\(n_b=b-f_b\\).
 
 Then, without loss of generality, let \\(a\\geq b\\). If
 \\[n_a-n_b=\\left|A'\\right|,\\] then all the squares in \\(A'\\)
