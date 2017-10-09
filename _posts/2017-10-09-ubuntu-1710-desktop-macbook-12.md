@@ -91,7 +91,7 @@ that you can boot into from your MacBook
    integer `N`. Then ensure that none of the partitions present on the
    disk are mounted with
    ```
-   diskutilunmountDisk /dev/diskN
+   diskutil unmountDisk /dev/diskN
    ```
 4. We now burn the `.dmg` file to the disk with
    ```
