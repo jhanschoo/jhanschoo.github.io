@@ -217,7 +217,7 @@ We now build the GRUB2 bootloader.
    grub-mkstandalone -o boot.efi -d usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz boot/grub/grub.cfg
    ```
 5. From outside the `chroot`'d shell (that is, from the Live Ubuntu
-   desktop), save your boot.efi file somewhere from your macOS
+   desktop), save your `boot.efi` file somewhere from your macOS
    installation (e.g. Google Drive).
 6. Reboot into macOS. Due to how the macOS searches for bootable
    partitions, from now on you may have to always hold down the
