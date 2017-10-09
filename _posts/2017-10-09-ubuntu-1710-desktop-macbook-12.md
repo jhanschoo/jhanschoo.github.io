@@ -37,8 +37,9 @@ assumed.
     chooses which volume to boot into still works fine,
   * Booting into Windows through GRUB2 is possible,
   * Removing the `ubuntu` folder from the EFI Partition, resetting the
-    default boot partition from macOS, and not connecting the external
-    drive containing Ubuntu should revert things to a normal state.
+    default boot partition to the macOS partition from within macOS,
+    and not connecting the external drive containing Ubuntu should
+    revert things to a normal state.
 * I strongly do not recommend installing Ubuntu to the internal drive
   as macOS upgrades tend to assume several things about the
   partitioning state of the internal SSD and messing around with it
