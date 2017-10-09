@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Running Ubuntu 17.10 Desktop on the 12-inch MacBook
-category: Leisure
-tags: [ubunut, macbook, linux]
+title: Installing and Running Ubuntu 17.10 Desktop on the 12-inch MacBook
+category: Linux
+tags: [ubuntu, macbook, linux]
 ---
 
 ## Requirements
@@ -180,7 +180,7 @@ required for input.
    alone.
 6. Proceed and complete the installation, but do not reboot just yet.
 
-# Stage 4: Making Ubuntu bootable
+## Stage 4: Making Ubuntu bootable
 
 You should now be booted into a Live Ubuntu OS. You should have both
 the LiveUSB connected from which you are running the OS, and also have
@@ -233,7 +233,7 @@ We now build the GRUB2 bootloader.
 
 We are done. Your Ubuntu 17.10 installation should now be bootable.
 
-# Stage 5: Building, configuring, and installing the keyboard and touchpad drivers
+## Stage 5: Building, configuring, and installing the keyboard and touchpad drivers
 
 You do not need the LiveUSB from here on. Reboot the MacBook with
 `Option` key held down while booting, and select "Ubuntu Boot Loader".
