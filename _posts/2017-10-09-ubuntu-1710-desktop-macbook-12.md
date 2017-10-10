@@ -44,16 +44,16 @@ assumed.
   as macOS upgrades tend to assume several things about the
   partitioning state of the internal SSD and messing around with it
   outside of Disk Utility and the Bootcamp-proscribed instructions may
-  mess stuff up. In particular, note the macOS upgrades that converted
-  HFS+ partitions so that they were within CoreStorage partitions, and
-  the macOS upgrades that converted HFS+ filesystems into APFS
-  filesystems.
+  mess stuff up. In particular, note the upgrades beginning with
+  Yosemite that converted HFS+ partitions so that they were within
+  CoreStorage containers, and the upgrades beginning with High Sierra
+  that converted HFS+ filesystems into APFS filesystems.
 
 ## The Stages
 
 1. Preparing the LiveUSB.
   * After this stage you should have a USB containing a live image
-that you can boot into from your MacBook
+that you can boot into from your MacBook.
 2. Preparing the target device to make it bootable.
   * After this stage you should have a partition that your MacBook
     recognizes as a partition containing macOS that it can boot into.
@@ -78,11 +78,11 @@ that you can boot into from your MacBook
    the other versions, which may have slightly different installation
    instructions in stage 3. The 17.10 Beta 2 desktop image suffices.
 2. We convert the `.iso` image file into a `.dmg` disk image file that the
-   MacBook recognizes as bootable.
+   native bootloader recognizes as bootable.
    ```
    hdiutil convert -format UDRW -o /path/to/img.dmg /path/to/image.iso
    ```
-3. We insert our Live-USB-to-be confirm the location our LiveUSB-to-be
+3. We insert our Live-USB-to-be. Confirm the location that our LiveUSB-to-be
    is at with
    ```
    diskutil list
@@ -115,7 +115,7 @@ We are done with this stage. Unmount your LiveUSB.
    ```
    diskutil eraseDisk JHFS+ Ubuntu GPT diskN
    ```
-3. Split the JHFS partition into a 128MB (size is pretty arbitrary;
+3. Split the JHFS+ partition into a 128MB (size is pretty arbitrary;
    ex. we have used MB and not MiB) partition for the GRUB2 bootloader
    and a partition for our installation with a command like
    ```
@@ -123,7 +123,7 @@ We are done with this stage. Unmount your LiveUSB.
    ```
 4. We now mount the "Ubuntu Boot Loader" partition and navigate our
    terminal shell into its root; the standard Finder mounting
-   suffices, whereupon it will be located at `/Volumnes/Ubuntu Boot
+   suffices, whereupon it will be located at `/Volumes/Ubuntu Boot
    Loader`.
 5. We create the necessary folders necessary for the MacBook to
    recognize it as a macOS installation
@@ -146,7 +146,7 @@ We are done with this stage. Unmount your LiveUSB.
    </dict>
    </plist>
    ```
-7. Finally, we set the boot flag for the partition with
+7. Finally, we set the Apple-specific boot flag for the partition with
    ```
    sudo bless --device /dev/diskNsM
    ```
@@ -163,7 +163,7 @@ required for input.
 
 1. When the MacBook starts, immediately during or before the bootup
    chime, hold down the `Option` button to enter the native
-   bootloader. Select any of the `EFI Boot` options.
+   bootloader. Select any of the "EFI Boot" options.
 2. You should boot into the LiveUSB's GRUB2 bootloader. Select "Try
    Ubuntu without installing". Your internal keyboard still works in
    the GRUB2 bootloader
@@ -212,20 +212,20 @@ We now build the GRUB2 bootloader.
    ```
    grub-mkconfig -o boot/grub/grub.cfg
    ```
-4. We build GRUB2 into a `boot.efi` located at the root of our Ubuntu
-   17.10 installation with
+4. We build GRUB2 into a `boot.efi` located (for convenience) at the root of our
+   Ubuntu 17.10 installation with
    ```
    grub-mkstandalone -o boot.efi -d usr/lib/grub/x86_64-efi -O x86_64-efi --compress=xz boot/grub/grub.cfg
    ```
 5. From outside the `chroot`'d shell (that is, from the Live Ubuntu
    desktop), save your `boot.efi` file somewhere from your macOS
    installation (e.g. Google Drive).
-6. Reboot into macOS. Due to how the macOS searches for bootable
+6. Reboot into macOS. Due to how the native bootloader searches for bootable
    partitions, from now on you may have to always hold down the
    `Option` button and select the location you would like to boot
    into, else you may arrive at a GRUB2 fallback shell.
 7. Mount the "Ubuntu Boot Loader" partition. From the Terminal,
-   (Finder glitches out) copy the GRUB2 image into the partition with
+   (since Finder glitches out in that directory) copy the GRUB2 image into the partition with
    ```
    cp /path/to/boot.efi "/Volumes/Ubuntu Boot Loader/System/Library/CoreServices/"
    ```
@@ -248,6 +248,9 @@ in.
    with
    ```
    sudo apt update
+   ```
+   and then
+   ```
    sudo apt upgrade
    ```
 
