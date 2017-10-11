@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Javascript's `async` and `await`; the Short Version
-category: Linux
-tags: [ubuntu, macbook, linux]
+title: Javascript's async and await; the Short Version
+category: Programming
+tags: [programming, javascript, async, await]
 ---
 
 Javascript's `async` and `await` allows you to use `Promises` more
