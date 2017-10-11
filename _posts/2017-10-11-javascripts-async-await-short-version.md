@@ -9,7 +9,7 @@ Javascript's `async` and `await` allows you to use `Promises` more
 transparently. Here's a short summary of what they mean, for people
 who are already familiar with the other parts of JS.
 
-## `async`
+## async
 
 When you write a function
 ```
@@ -24,7 +24,7 @@ promises are "flattened". So the same behavior happens when we `return` a
 promise from within an `async` function; if that promise is rejected, so is the
 promise associated with out `async` function call.
 
-## `await`
+## await
 
 When you write
 ```
