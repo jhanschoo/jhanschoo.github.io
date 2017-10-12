@@ -39,7 +39,7 @@ instructions here are current as of the time of writing.
 6. Other than this line, the rest of the file should look like
    ```
    declare module 'package-name' {
-     // this is for CommonJS-style imports
+     // this style is for CommonJS-style imports
      import * as otherPackage from 'other-package';
 
      // type definitions
