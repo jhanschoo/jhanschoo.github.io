@@ -77,6 +77,7 @@ done
 
 These scripts were created while I was diagnosing Visual Studio Code exhausting
 inotify watches. It turns out that VSCode does not respect the `files.watcherExclude`
-setting properly: see https://github.com/Microsoft/vscode/issues/45295. Unfortunately,
-the workaround posted in the thread did not seem to work for me.
+setting properly in multi-root workspaces: see
+https://github.com/Microsoft/vscode/issues/45295 and
+https://github.com/Microsoft/vscode/issues/40898.
 
