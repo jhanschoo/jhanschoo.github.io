@@ -28,7 +28,7 @@ github_repo: jhanschoo.github.io
 markdown: kramdown
 mathjax: true
 theme: minima
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
