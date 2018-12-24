@@ -8,10 +8,14 @@ tags: [linux]
 To get the number of open `inotify` watches, run the following:
 
 ```
-find /proc/*/fd/* -type l -lname 'anon_inode:inotify' 2>/dev/null | sed -e 's@/fd/@/fdinfo/@' | xargs cat | grep inotify | wc -l
+find /proc/*/fd/* -type l -lname 'anon_inode:inotify' 2>/dev/null |
+sed -e 's@/fd/@/fdinfo/@' |
+xargs cat |
+grep inotify |
+wc -l
 ```
 
-To print processes with open watches in a given workspace and the files being watched, run this zsh script:
+To print processes with open watches in a given workspace and the files being watched, run this zsh script (remember to change the workspace):
 
 ```
 #!/usr/bin/env zsh
@@ -81,3 +85,9 @@ done
 # uniq |
 # while read line; do find src/writerite -inum $(($line)); done;
 ```
+
+These scripts were created while I was diagnosing Visual Studio Code exhausting
+inotify watches. It turns out that VSCode does not respect the `files.watcherExclude`
+setting properly: see https://github.com/Microsoft/vscode/issues/45295. Unfortunately,
+the workaround posted in the thread did not seem to work for me.
+
