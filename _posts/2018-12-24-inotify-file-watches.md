@@ -32,7 +32,7 @@ typeset -A inode_map
 # list all the files in the workspace, then pass all the paths to ls to obtain
 # their corresponding inodes, then sort these lines to uniquify the inodes in case
 # duplicate hard links are present; then for each line
-find ${HOME}/src/writerite/frontend-react -exec ls -di {} + | sort -nu -k1,1 | while read line
+find "$workspace" -exec ls -di {} + | sort -nu -k1,1 | while read line
 do
   # split it into words by the word-separator, then initialize an array with these words
   line_arr=(${=line})
@@ -73,17 +73,6 @@ do
   done
   echo
 done
-
-# the following one-liner simply echos the number of watches in the workspace
-
-# find /proc/*/fd/* -type l -lname 'anon_inode:inotify' 2>/dev/null |
-# sed -e 's@/fd/@/fdinfo/@' |
-# xargs cat |
-# grep inotify |
-# sed -e 's/^.*ino:\([[:alnum:]]*\) .*$/0x\1/' |
-# sort -n |
-# uniq |
-# while read line; do find src/writerite -inum $(($line)); done;
 ```
 
 These scripts were created while I was diagnosing Visual Studio Code exhausting
