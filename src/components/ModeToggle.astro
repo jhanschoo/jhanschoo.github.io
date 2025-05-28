@@ -1,0 +1,61 @@
+---
+interface Props {
+  class?: string;
+  [key: string]: any;
+}
+
+const { class: className, ...rest } = Astro.props;
+import { Button } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+---
+
+<Button
+  id="theme-toggle"
+  variant="ghost"
+  size="icon"
+  aria-label="Toggle theme"
+  className={className}
+  {...rest}
+>
+  <Icon
+    name="lucide:sun"
+    class="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+  />
+  <Icon
+    name="lucide:moon"
+    class="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+  />
+</Button>
+
+<script>
+  // Theme toggle functionality - only handles the click toggle
+  function initThemeToggle() {
+    const updateTheme = (theme: string) => {
+      const isDark = theme === "dark";
+      document.documentElement.classList.toggle("dark", isDark);
+
+      if (typeof localStorage !== "undefined") {
+        localStorage.setItem("theme", theme);
+      }
+    };
+
+    // Add click handler to toggle button
+    const toggleButton = document.getElementById("theme-toggle");
+    if (toggleButton) {
+      toggleButton.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        updateTheme(isDark ? "light" : "dark");
+      });
+    }
+  }
+
+  // Initialize on page load
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initThemeToggle);
+  } else {
+    initThemeToggle();
+  }
+
+  // Re-initialize after view transitions (for Astro's view transitions)
+  document.addEventListener("astro:page-load", initThemeToggle);
+</script>
