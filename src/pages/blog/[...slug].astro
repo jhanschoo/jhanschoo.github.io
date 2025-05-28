@@ -1,21 +1,39 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
-import { render } from 'astro:content';
+import Layout from "@/layouts/Layout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import { SITE } from "@/consts";
+import { render } from "astro:content";
+import "@styles/prose.css";
+import BlogPostTag from "@/components/BlogPostTag.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
 }
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
+const { data: { title, description, pubDate, tags } } = post;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>
+<Layout>
+  <Fragment slot="head">
+    <title>{title}—{SITE.title}</title>
+    <meta name="description" content={description} />
+  </Fragment>
+  <article class="prose">
+    <h1>{title}</h1>
+    <h2 class="text-base text-center mt-4 mx-4 md:mx-8">{description}</h2>
+    <p class="text-muted-foreground text-center text-sm mb-4 italic">
+      published <time>{pubDate.toLocaleDateString()}</time>
+    </p>
+    <p class="flex flex-wrap justify-center gap-2 mb-4">
+      {tags.map((tag) => <BlogPostTag>{tag}</BlogPostTag>)}
+    </p>
+    <Content />
+  </article>
+</Layout>

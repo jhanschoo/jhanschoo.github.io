@@ -1,0 +1,66 @@
+---
+import "@/styles/global.css";
+
+import { SITE } from "@/consts";
+import Header from "@/components/Header.astro";
+import { Separator } from "@/components/ui/separator";
+import Head from "@/components/Head.astro";
+---
+
+<!doctype html>
+<html class="bg-background text-foreground font-serif" lang={SITE.locale}>
+  <Head>
+    <slot name="head" />
+  </Head>
+  <body class="overflow-x-hidden">
+    <script is:inline>
+      // Initialize theme before page renders to prevent flash
+      const getThemePreference = () => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+
+      const isDark = getThemePreference() === "dark";
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+      if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+
+        // Listen for system theme changes (only when no manual preference is set)
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+              document.documentElement.classList[e.matches ? "add" : "remove"](
+                "dark"
+              );
+            }
+          });
+      }
+    </script>
+
+    <div class="flex flex-col h-fit min-h-screen mb-36">
+      <Header />
+      <Separator className="mx-auto max-w-3xl" orientation="horizontal" />
+      <main class="grow">
+        <div class="mx-auto flex max-w-3xl grow flex-col px-4 gap-2">
+          <slot />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
