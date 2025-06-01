@@ -5,7 +5,7 @@ import type { Site } from "@/types";
 export const SITE: Site = {
   title: "The Lay & Brook",
   description: "a personal blog by jhanschoo",
-  href: "https://astro-erudite.vercel.app",
+  href: "https://jhanschoo.github.io",
   author: "jhanschoo",
   locale: "en-US",
 };
