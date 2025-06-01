@@ -2,7 +2,7 @@
 title: "jepsen.io/maelstrom"
 description: "Distributed computing concepts through implementations cumulating in Raft consensus."
 pubDate: "2025-06-01"
-tags: ["lake", "distributed computing", "jepsen", "maelstrom", "raft"]
+tags: ["lay", "distributed computing", "jepsen", "maelstrom", "raft"]
 ---
 
 In late 2024, I took some time to work through the [Maelstrom](https://github.com/jepsen-io/maelstrom) demos. From its `README.md`:
