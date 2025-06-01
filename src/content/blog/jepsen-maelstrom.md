@@ -1,6 +1,6 @@
 ---
 title: "jepsen.io/maelstrom"
-description: "Distributed computing concepts by implemetations cumulating in Raft consensus."
+description: "Distributed computing concepts through implementations cumulating in Raft consensus."
 pubDate: "2025-06-01"
 tags: ["lake", "distributed computing", "jepsen", "maelstrom", "raft"]
 ---
