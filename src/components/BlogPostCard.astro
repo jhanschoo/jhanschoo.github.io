@@ -13,6 +13,7 @@ import {
   CardFooter,
 } from "./ui/card";
 import BlogPostTag from "./BlogPostTag.astro";
+import FormattedDate from "./FormattedDate.astro";
 
 const {
   post: {
@@ -25,7 +26,11 @@ const {
 
 <Card className="bg-background border-none shadow-none gap-2">
   <CardHeader className="px-0">
-    <CardTitle><a href={`/blog/${id}`} class="text-xl mr-2">{title}</a>{tags.map((tag) => <BlogPostTag>{tag}</BlogPostTag>)}</CardTitle>
+    <CardTitle
+      ><a href={`/blog/${id}`} class="text-xl mr-2">{title}</a>{
+        tags.map((tag) => <BlogPostTag>{tag}</BlogPostTag>)
+      }</CardTitle
+    >
     <CardDescription>{description}</CardDescription>
   </CardHeader>
   {
@@ -38,7 +43,7 @@ const {
   }
   <CardFooter className="text-sm px-0">
     <p class="ml-12 italic">
-      &mdash;published <time>{pubDate.toLocaleDateString()}</time>
+      &mdash;published <FormattedDate date={pubDate} />
     </p>
   </CardFooter>
 </Card>
