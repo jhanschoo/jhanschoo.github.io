@@ -1,7 +1,7 @@
 ---
 title: "Quantum Mechanical Fundamentals: Part II—The time-evolution operator and the Hamiltonian"
 description: "We now model how states change over time."
-pubDate: "2024-05-25"
+pubDate: "2025-05-25"
 tags: ["brook", "quantum mechanics", "qmf"]
 ---
 

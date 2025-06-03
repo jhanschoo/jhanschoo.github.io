@@ -1,7 +1,7 @@
 ---
 title: "Quantum Mechanical Fundamentals: Prelude"
 description: "I discuss what I've been doing recently, and outline the next few posts."
-pubDate: "2024-05-05"
+pubDate: "2025-05-05"
 tags: ["brook", "quantum mechanics", "qmf"]
 ---
 Out of interest, I have been spending some of my time learning some fundamentals of quantum computing through the [*PennyLane Codebook*](https://pennylane.ai/codebook), an outreach and educational resource continually being developed by the quantum computing startup *Xanadu* based in Toronto. The *Codebook* introduces quantum computing concepts through exercises where concepts are developed twice, once in prose, following which a Python exercise is given to reinforce the concepts. Quantum computing algorithms in the exercises largely utilize the *PennyLane* framework. Note that other very similar code-and-lesson resources exist covering largely the same material:
