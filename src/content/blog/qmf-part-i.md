@@ -1,7 +1,7 @@
 ---
 title: "Quantum Mechanical Fundamentals: Part I—Representing states"
 description: "We shall see how to implement and represent a single qubit succinctly."
-pubDate: "2024-05-24"
+pubDate: "2025-05-24"
 tags: ["brook", "quantum mechanics", "qmf"]
 ---
 
