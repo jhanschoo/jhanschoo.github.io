@@ -1,0 +1,16 @@
+---
+title: "Emplotment"
+description: "Responding to *The Historical Text as Literary Artifact*, a chapter in Hayden White's *Tropics of Discourse: Essays in Cultural Criticism*."
+pubDate: "2025-06-03"
+tags: ["brook", "history", "literature"]
+---
+
+Today I encountered [this Hacker News comment](https://news.ycombinator.com/item?id=44166102#44167163). This led me to dig up the chapter *The Historical Text as Literary Artifact* from Hayden White's *Tropics of Discourse: Essays in Cultural Criticism*.
+
+In it, Hayden White argues that the texts that historians write are very much a work of fiction (the historians that he is responding to), and the historian chooses sources and arranges them in a way that tells a story. He calles this process **emplotment**. He observes additionally that the historian chooses to write a history on matters that they think should be brought to the current milleu. Of course, White goes into more detail about the literary devices that historians use, and I shall not dwell more on it here, and one can read the article.
+
+The modern historian, of course, still primarily operates through many critical techniques, that transforms sources that are percieved as as contradictory or inconsistent, or fallacious, into an account that is internally consistent. But even in the most rote application of method in the most technical domain, if we are left only with the polished product, we have lost information involving the subjective perception of each source, or objective noise or variance that was in the sources themselves, unless they were included in the final account. Most basic criticism draw on our present understanding of the context of these sources, and many more; already, this is fallible.
+
+I have two immediate thoughts regarding White's discussion. While White is responding to historians, the observation that interpretations are necessarily inauthentic is very universal. For an extreme and clear example, suppose that I want to provide an accurate account of a ball that I have just thrown. I will use a basic kinematic model, that abstracts gravity and air resistance and mass and other things, so that the computation of the trajectory over time is tractable. But in doing so I have thrown away things that were irrelevant to the model, like the color of the ball. Perhaps in some other context, I may be concerned with color, but not so in this model. So in respect to the color of the ball and many other things, my kinematic model is inauthentic.
+
+The other thought that I had was that history as a discipline is but one modality of engaging with history. Historians write historical accounts after examining their sources critically. But Catholics, for example, produce hagiographies, accounts of the lives of saints, that are arrived at through different techniques. Going beyond the textual modality, revivalist architecture recreates even as it reinterprets historical styles according to contemporary aesthetic sensibilities and construction methods. It brings into the present a blinkered window of the past, even though it is not a textual narrative. Within these disciplines, they have chosen to value certain aspects of the past, and in some way recorded them.
