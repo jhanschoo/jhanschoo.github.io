@@ -18,6 +18,12 @@ export default defineConfig({
     markdown: {
         rehypePlugins: [rehypeKatex],
         remarkPlugins: [remarkMath],
+        shikiConfig: {
+            themes: {
+                light: 'gruvbox-light-soft',
+                dark: 'gruvbox-dark-soft',
+            },
+        },
     },
     vite: {
         plugins: [tailwindcss()],
