@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 import icon from 'astro-icon';
 
-import rehypeKatex from 'rehype-katex'
+import rehypeMathML from '@daiji256/rehype-mathml'
 import remarkMath from 'remark-math'
 
 
@@ -16,7 +16,7 @@ export default defineConfig({
     site: 'https://jhanschoo.github.io',
     integrations: [react(), mdx(), sitemap(), icon()],
     markdown: {
-        rehypePlugins: [rehypeKatex],
+        rehypePlugins: [rehypeMathML],
         remarkPlugins: [remarkMath],
         shikiConfig: {
             themes: {
