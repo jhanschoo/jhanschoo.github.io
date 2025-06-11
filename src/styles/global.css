@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./Temml-Local.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -164,17 +165,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-  math {
-    @apply font-math;
-
-    /* Note: may need more fixes from https://github.com/ronkok/Temml/blob/main/site/assets/Temml-STIX2.css */
-    .tml-right {
-      @apply text-right;
-    }
-
-    .tml-left {
-      @apply text-left;
-    }
   }
 }
