@@ -20,12 +20,8 @@ const restPosts = posts?.slice(1) || [];
     latestPost ? (
       <BlogPostCard post={latestPost} />
     ) : (
-      <p class="text-center text-4xl m-8">This blog is empty!</p>
+      <p class="m-8 text-center text-4xl">This blog is empty!</p>
     )
   }
-  {
-    restPosts.map((post) => (
-      <BlogPostCardSmall post={post} />
-    ))
-  }
+  {restPosts.map((post) => <BlogPostCardSmall post={post} />)}
 </Layout>

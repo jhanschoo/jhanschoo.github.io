@@ -3,49 +3,50 @@
 @layer base {
   .prose {
     h1 {
-      @apply mx-4 mt-6 mb-2 text-4xl text-center tracking-tight lg:text-5xl
+      @apply mx-4 mt-6 mb-2 text-center text-4xl tracking-tight lg:text-5xl;
     }
     h2 {
-      @apply py-2 text-3xl font-semibold
+      @apply py-2 text-3xl font-semibold;
     }
     h3 {
-      @apply py-2 text-2xl font-semibold italic
+      @apply py-2 text-2xl font-semibold italic;
     }
     h4 {
-      @apply py-1.5 text-xl font-extrabold
+      @apply py-1.5 text-xl font-extrabold;
     }
     h5 {
-      @apply py-1 text-xl italic
+      @apply py-1 text-xl italic;
     }
     h6 {
-      @apply py-1 text-xl
+      @apply py-1 text-xl;
     }
     p {
-      @apply my-1.5
+      @apply my-1.5;
     }
     a {
-      @apply underline-offset-2 underline hover:text-primary
+      @apply hover:text-primary underline underline-offset-2;
     }
     table {
-      @apply border-t-2 border-b-1 w-full
+      @apply w-full border-t-2 border-b-1;
     }
     thead {
-      @apply border-b-1
+      @apply border-b-1;
     }
     tr {
-      @apply hover:bg-muted
+      @apply hover:bg-muted;
     }
-    th, td {
-      @apply hover:bg-accent px-2 py-1
+    th,
+    td {
+      @apply hover:bg-accent px-2 py-1;
     }
     blockquote {
-      @apply border-l-2 mt-6 pl-6
+      @apply mt-6 border-l-2 pl-6;
     }
     ul {
-      @apply my-2 ml-6 list-disc [&>li]:mt-1
+      @apply my-2 ml-6 list-disc [&>li]:mt-1;
     }
     ol {
-      @apply my-2 ml-6 list-decimal [&>li]:mt-1
+      @apply my-2 ml-6 list-decimal [&>li]:mt-1;
     }
   }
 }

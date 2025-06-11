@@ -4,13 +4,14 @@ description: "I discuss what I've been doing recently, and outline the next few 
 pubDate: "2025-05-05"
 tags: ["brook", "quantum mechanics", "qmf"]
 ---
-Out of interest, I have been spending some of my time learning some fundamentals of quantum computing through the [*PennyLane Codebook*](https://pennylane.ai/codebook), an outreach and educational resource continually being developed by the quantum computing startup *Xanadu* based in Toronto. The *Codebook* introduces quantum computing concepts through exercises where concepts are developed twice, once in prose, following which a Python exercise is given to reinforce the concepts. Quantum computing algorithms in the exercises largely utilize the *PennyLane* framework. Note that other very similar code-and-lesson resources exist covering largely the same material:
 
-- [IBM Quantum Learning](https://learning.quantum.ibm.com/), the successor to the *Qiskit textbook*, uses exercises in IBM's Python quantum computing framework *Qiskit* for its code counterpart.
-- [Microsoft Quantum katas](https://quantum.microsoft.com/en-us/tools/quantum-katas) are a series of katas, using exercises in the *Q\#* programming language for the code counterpart.
+Out of interest, I have been spending some of my time learning some fundamentals of quantum computing through the [_PennyLane Codebook_](https://pennylane.ai/codebook), an outreach and educational resource continually being developed by the quantum computing startup _Xanadu_ based in Toronto. The _Codebook_ introduces quantum computing concepts through exercises where concepts are developed twice, once in prose, following which a Python exercise is given to reinforce the concepts. Quantum computing algorithms in the exercises largely utilize the _PennyLane_ framework. Note that other very similar code-and-lesson resources exist covering largely the same material:
+
+- [IBM Quantum Learning](https://learning.quantum.ibm.com/), the successor to the _Qiskit textbook_, uses exercises in IBM's Python quantum computing framework _Qiskit_ for its code counterpart.
+- [Microsoft Quantum katas](https://quantum.microsoft.com/en-us/tools/quantum-katas) are a series of katas, using exercises in the _Q\#_ programming language for the code counterpart.
 - In addition to these, many universities offer courses covering similar fundamental topics.
 
-You have seen me mention the *Pennylane* and *Qiskit* Python frameworks, as well as the *Q\#* programming language. Generally speaking, it is in these frameworks that a practitioner writes quantum circuits (aka. quantum algorithms) in. These frameworks abstract quantum computing primitives from the hardware and simulators available, while providing backends that compile these circuits and send jobs to the target underlying hardware or simulator.
+You have seen me mention the _Pennylane_ and _Qiskit_ Python frameworks, as well as the _Q\#_ programming language. Generally speaking, it is in these frameworks that a practitioner writes quantum circuits (aka. quantum algorithms) in. These frameworks abstract quantum computing primitives from the hardware and simulators available, while providing backends that compile these circuits and send jobs to the target underlying hardware or simulator.
 
 Nevertheless, I became interested in knowing more the quantum-mechanical principles underlying QC. One immediately bumps into quantum mechanical concepts in QC; whether it be in hardware or in simulation. For that reason, I developed this series of posts. In this series, I make an opinionated choice regarding the development that I hope differentiates it from far more comprehensive and standard treatments.
 
