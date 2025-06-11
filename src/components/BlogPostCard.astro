@@ -22,7 +22,9 @@ const {
   },
 } = Astro.props;
 
-const { remarkPluginFrontmatter: { plainText } } = await render(Astro.props.post);
+const {
+  remarkPluginFrontmatter: { plainText },
+} = await render(Astro.props.post);
 ---
 
 <Card className="bg-background gap-2 border-none shadow-none">
