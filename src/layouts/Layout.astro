@@ -46,18 +46,18 @@ import Head from "@/components/Head.astro";
           .addEventListener("change", (e) => {
             if (!localStorage.getItem("theme")) {
               document.documentElement.classList[e.matches ? "add" : "remove"](
-                "dark"
+                "dark",
               );
             }
           });
       }
     </script>
 
-    <div class="flex flex-col h-fit min-h-screen mb-36">
+    <div class="mb-36 flex h-fit min-h-screen flex-col">
       <Header />
       <Separator className="mx-auto max-w-3xl" orientation="horizontal" />
       <main class="grow">
-        <div class="mx-auto flex max-w-3xl grow flex-col px-4 gap-2">
+        <div class="mx-auto flex max-w-3xl grow flex-col gap-2 px-4">
           <slot />
         </div>
       </main>

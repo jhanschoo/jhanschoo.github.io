@@ -5,7 +5,7 @@ pubDate: "2025-06-03"
 tags: ["brook", "history", "literature"]
 ---
 
-Today I encountered [this Hacker News comment](https://news.ycombinator.com/item?id=44166102#44167163). This led me to dig up the chapter *The Historical Text as Literary Artifact* from Hayden White's *Tropics of Discourse: Essays in Cultural Criticism*.
+Today I encountered [this Hacker News comment](https://news.ycombinator.com/item?id=44166102#44167163). This led me to dig up the chapter _The Historical Text as Literary Artifact_ from Hayden White's _Tropics of Discourse: Essays in Cultural Criticism_.
 
 In it, Hayden White argues that the texts that historians write are very much a work of fiction (the historians that he is responding to), and the historian chooses sources and arranges them in a way that tells a story. He calles this process **emplotment**. He observes additionally that the historian chooses to write a history on matters that they think should be brought to the current milleu. Of course, White goes into more detail about the literary devices that historians use, and I shall not dwell more on it here, and one can read the article.
 

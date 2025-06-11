@@ -24,10 +24,10 @@ const {
 } = Astro.props;
 ---
 
-<Card className="bg-background border-none shadow-none gap-2">
+<Card className="bg-background gap-2 border-none shadow-none">
   <CardHeader className="px-0">
     <CardTitle
-      ><a href={`/blog/${id}`} class="text-xl mr-2">{title}</a>{
+      ><a href={`/blog/${id}`} class="mr-2 text-xl">{title}</a>{
         tags.map((tag) => <BlogPostTag>{tag}</BlogPostTag>)
       }</CardTitle
     >
@@ -41,7 +41,7 @@ const {
       </CardContent>
     )
   }
-  <CardFooter className="text-sm px-0">
+  <CardFooter className="px-0 text-sm">
     <p class="ml-12 italic">
       &mdash;published <FormattedDate date={pubDate} />
     </p>
