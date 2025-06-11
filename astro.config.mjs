@@ -9,6 +9,7 @@ import icon from "astro-icon";
 
 import rehypeMathML from "@daiji256/rehype-mathml";
 import remarkMath from "remark-math";
+import remarkAddAstroPlainText from "./remark-plugins/remark-add-astro-plain-text";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
   integrations: [react(), mdx(), sitemap(), icon()],
   markdown: {
     rehypePlugins: [rehypeMathML],
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkAddAstroPlainText],
     shikiConfig: {
       themes: {
         light: "gruvbox-light-soft",

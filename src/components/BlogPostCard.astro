@@ -3,7 +3,7 @@ interface Props {
   post: CollectionEntry<"blog">;
 }
 
-import type { CollectionEntry } from "astro:content";
+import { type CollectionEntry, render } from "astro:content";
 import {
   Card,
   CardHeader,
@@ -17,11 +17,12 @@ import FormattedDate from "./FormattedDate.astro";
 
 const {
   post: {
-    body,
     data: { title, description, pubDate, tags },
     id,
   },
 } = Astro.props;
+
+const { remarkPluginFrontmatter: { plainText } } = await render(Astro.props.post);
 ---
 
 <Card className="bg-background gap-2 border-none shadow-none">
@@ -34,10 +35,10 @@ const {
     <CardDescription>{description}</CardDescription>
   </CardHeader>
   {
-    body && (
+    plainText && (
       <CardContent className="px-0">
-        {body.slice(0, 400)}
-        {body.length > 400 ? "..." : ""}
+        {plainText.slice(0, 400)}
+        {plainText.length > 400 ? "..." : ""}
       </CardContent>
     )
   }
