@@ -1,6 +1,6 @@
 ---
 title: "Quantum Mechanical Fundamentals: Part III—Beyond finite-dimensional spaces"
-description: "To measure infinity."
+description: "Continuity in properties."
 pubDate: "2025-05-26"
 tags: ["brook", "quantum mechanics", "qmf"]
 ---
