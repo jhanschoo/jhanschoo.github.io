@@ -1,5 +1,5 @@
 ---
-title: "Quantum Mechanical Fundamentals: Part III—Beyond finite-dimensional spaces"
+title: "Quantum Mechanical Fundamentals: Addendeum—Beyond finite-dimensional spaces"
 description: "Continuity in properties."
 pubDate: "2025-05-26"
 tags: ["brook", "quantum mechanics", "qmf"]

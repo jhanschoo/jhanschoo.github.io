@@ -117,6 +117,10 @@ Instead, suppose that we have prepared a state $\ket{\psi(\theta)}$. It is then 
 
 If additionally we have that $\theta\mapsto\ket{\psi(\theta)}$ has a derivative, then in fact the whole function $\theta\mapsto E_{\psi(\theta)}$ has a derivative, and we can compute it.[^3] With the above protocol to compute the expected energy level and gradients, we can perform gradient descent to find the parametrization $\theta_0$ that gives the lowest expected energy level, which is still an upper bound of the ground state energy level. We call this whole protocol a _variational quantum eigensolver_, and each parametric circuit that first prepares $\ket{\psi(\theta)}$ and then measures it in respect to a Pauli string is called an _Ansatz_.
 
+---
+
+In the previous post, we showed how the representation of quantum states in QM emerged from figuring out a way to succinctly model the dynamics of a class of light polarization experiments. In this post, we discussed how to model closed quantum systems that change continuously in time, and how to express a notion of energy under that evolution. Nevertheless, so far we have just dealt with these notions where only finitely-valued properties are concerned. For many applications this is sufficient, but when one wants to deal with continuum-valued properties, then sophisticated mathematical tools need to be brought to bear to model them in a mathematically rigorous manner. We give a quick overview of them in the next post.
+
 [^1]: This is, of course, not necessarily true in practical quantum computers, which are much more complex. Nevertheless, the point still stands that each interaction is some continuous change over time, and no interaction causes the quantum state to jump discontinuously from one state to another instantaneously.
 
 [^2]: It is more conventional to denote the Hamiltonian with $H$, but we do not do that here as we have used $H$ to denote the Hilbert space.
