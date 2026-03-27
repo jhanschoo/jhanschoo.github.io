@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -15,6 +15,47 @@ import remarkAddAstroPlainText from "./remark-plugins/remark-add-astro-plain-tex
 export default defineConfig({
   site: "https://jhanschoo.github.io",
   integrations: [react(), mdx(), sitemap(), icon()],
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "EB Garamond",
+      cssVariable: "--font-eb-garamond",
+      weights: ["400 800"],
+      styles: ["normal", "italic"],
+      subsets: ["latin"],
+      fallbacks: ["serif"],
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Monaspace Xenon",
+      cssVariable: "--font-monaspace-xenon",
+      fallbacks: ["monospace"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/MonaspaceXenonVarVF.ttf"],
+            weight: "100 900",
+            style: "normal",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.local(),
+      name: "Garamond Math",
+      cssVariable: "--font-garamond-math",
+      fallbacks: ["Cambria Math", "serif"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/Garamond-Math.otf"],
+            weight: "normal",
+            style: "normal",
+          },
+        ],
+      },
+    },
+  ],
   markdown: {
     rehypePlugins: [rehypeMathML],
     remarkPlugins: [remarkMath, remarkAddAstroPlainText],

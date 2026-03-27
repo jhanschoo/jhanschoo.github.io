@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import { SITE } from "../consts";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,35 +22,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- Font preloads -->
-  <link
-    rel="preload"
-    href="/fonts/EBGaramond-VariableFont_wght.ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/EBGaramond-Italic-VariableFont_wght.ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/Garamond-Math.otf"
-    as="font"
-    type="font/otf"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="/fonts/MonaspaceXenonVarVF[wght,wdth,slnt].ttf"
-    as="font"
-    type="font/ttf"
-    crossorigin
-  />
+  <!-- Fonts -->
+  <Font cssVariable="--font-eb-garamond" preload />
+  <Font cssVariable="--font-monaspace-xenon" preload />
+  <Font cssVariable="--font-garamond-math" preload />
 
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalURL} />
