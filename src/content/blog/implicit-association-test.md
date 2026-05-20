@@ -1,6 +1,6 @@
 ---
 title: "The Implicit Association Test, and (not) Predicting Behavior"
-description: "..."
+description: "Discussing meta-analyses of the IAT, primarily in relation to behavior"
 pubDate: "2026-05-18"
 tags:
   [
@@ -9,10 +9,9 @@ tags:
     "implicit association test",
     "iat",
   ]
-draft: true
 ---
 
-TODO: LW crosspost
+The below was written for a LessWrong post.
 
 Epistemic Status: Literature review; confident where sources are cited, mildly confident elsewhere.
 
@@ -124,7 +123,7 @@ Here, discrimination is understood in the individual sense as in (a).
 
 On (b),
 
-> U.S. courts have used a statistical criterion of discrimination that translates to correlational effect sizes that are often smaller than *r = .10*. This criterion is the “four-fifths rule”, which tests whether a *protected class* (identified by race, color, religion, national origin, gender, or disability status) has been treated in discriminatory fashion.
+> U.S. courts have used a statistical criterion of discrimination that translates to correlational effect sizes that are often smaller than *r = .10*. This criterion is the “four-fifths rule,” which tests whether a *protected class* (identified by race, color, religion, national origin, gender, or disability status) has been treated in discriminatory fashion.
 
 Moreover,
 
@@ -153,7 +152,7 @@ If one reliably observes correlative behavior in individuals, that is empirical 
 
 They also say,
 
-> Whether the small effects of unconscious bias that are suggested as at least possible from these meta-analyses will in reality grow, be contained, or disappear in complex, real-world social systems is a question that should be resolved through vigorous empirical testing, not computer simulations and thought experiments that, by their nature, must rely on strong yet untested assumptions.
+> Whether the small effects of unconscious bias that are suggested as at least possible from these meta-analysis will in reality grow, be contained or disappear in complex, real-world social systems is a question that should be resolved through vigorous empirical testing, not computer simulations and thought experiments that, by their nature, must rely on strong yet untested assumptions.
 
 Greenwald's lab continued to defend the view that ICCs are large, if IATs are properly conducted. They published in [Kurdi et al. (2018)](https://doi.org/10.1037/amp0000364) a meta-analysis, concluding:
 
