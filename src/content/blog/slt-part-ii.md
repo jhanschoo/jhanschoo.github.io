@@ -12,7 +12,7 @@ tags:
   ]
 ---
 
-In Part I, we saw how symmetries and redundant units in neural networks turn isolated minima into flat troughs and intersecting zero-loss surfaces $W_0 = \{w \in W : K(w) = 0\}$, where the Fisher information matrix $I(w)$ becomes singular and BIC's $\frac{d}{2}\log n$ volume penalty breaks down. To analyze such singular models without relying on quadratic approximations, Sumio Watanabe developed **Singular Learning Theory (SLT)**, replacing parameter counting with a direct measurement of volume near the optimal set.
+In [Part I](/blog/slt-part-i), we saw how symmetries and redundant units in neural networks turn isolated minima into flat troughs and intersecting zero-loss surfaces $W_0 = \{w \in W : K(w) = 0\}$, where the Fisher information matrix $I(w)$ becomes singular and BIC's $\frac{d}{2}\log n$ volume penalty breaks down. To analyze such singular models without relying on quadratic approximations, Sumio Watanabe developed **Singular Learning Theory (SLT)**, replacing parameter counting with a direct measurement of volume near the optimal set.
 
 ## Volume scaling and the Real Log Canonical Threshold
 
@@ -63,7 +63,7 @@ $$
 F_n = n L_n(w_0) + \lambda \log n - (m - 1) \log \log n + \mathcal{O}_p(1).
 $$
 
-Compare this directly with BIC from Part I: the raw dimension penalty $\frac{d}{2} \log n$ is replaced by the geometric penalty $\lambda \log n$, and the singular behavior that broke $\log \det I(w_0)$ is now absorbed cleanly into $\lambda$ and $m$. Crucially, because $\lambda$ depends only on how the sublevel volume $V(\epsilon)$ shrinks as $\epsilon \to 0^+$, it is invariant to adding redundant parameters or reparametrizing symmetries: doubling the width of a network with duplicate neurons inflates $d$, while $\lambda$ remains bounded by the effective complexity of the underlying input-output map.
+Compare this directly with BIC from [Part I](/blog/slt-part-i): the raw dimension penalty $\frac{d}{2} \log n$ is replaced by the geometric penalty $\lambda \log n$, and the singular behavior that broke $\log \det I(w_0)$ is now absorbed cleanly into $\lambda$ and $m$. Crucially, because $\lambda$ depends only on how the sublevel volume $V(\epsilon)$ shrinks as $\epsilon \to 0^+$, it is invariant to adding redundant parameters or reparametrizing symmetries: doubling the width of a network with duplicate neurons inflates $d$, while $\lambda$ remains bounded by the effective complexity of the underlying input-output map.
 
 Notice that the same free-energy decomposition applies not only across separate model families, but also across competing neighborhoods *inside a single network*. For any local basin $U \subset W$, we can restrict the partition function to $U$ and define its **local free energy**
 
@@ -101,4 +101,4 @@ Although SGD does not literally sample from the Bayesian posterior, this balance
 
 Because dropping $\lambda$ requires reorganizing weights so that redundant units release onto intersecting zero-planes, escaping a high-$\lambda$ basin often shows up externally as a sharp **phase transition**—such as delayed generalization in *grokking*, or the sudden emergence of induction heads during language model pretraining.
 
-In Part III, we turn this theoretical picture into a direct empirical probe—using SGLD to measure the local geometry around the checkpoints that optimization actually visits.
+In [Part III](/blog/slt-part-iii), we turn this theoretical picture into a practical tool—using SGLD to measure the local geometry around the checkpoints that optimization actually visits.

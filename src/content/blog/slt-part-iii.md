@@ -12,9 +12,9 @@ tags:
   ]
 ---
 
-While the RLCT resolves the paradox of overparameterization in theory, it is a global, asymptotic invariant defined around $W_0$ with respect to the unknown data-generating distribution $q(x)$ as $n \to \infty$. For a real neural network trained on finite data, we do not know $q(x)$ in closed form and cannot resolve algebraic singularities across millions or billions of weights by hand.
+While the RLCT introduced in [Part II](/blog/slt-part-ii) resolves the paradox of overparameterization in theory, it is a global, asymptotic invariant defined around $W_0$ with respect to the unknown data-generating distribution $q(x)$ as $n \to \infty$. For a real neural network trained on finite data, we do not know $q(x)$ in closed form and cannot resolve algebraic singularities across millions or billions of weights by hand.
 
-To turn Watanabe's invariant into an empirical probe applicable to a specific model checkpoint $w^*$—whether at convergence or partway through training—Lau et al. (2023) introduced the **Local Learning Coefficient (LLC)**, denoted $\hat{\lambda}(w^*)$.
+To turn Watanabe's invariant into a practical tool applicable to a specific model checkpoint $w^*$—whether at convergence or partway through training—Lau et al. (2023) introduced the **Local Learning Coefficient (LLC)**, denoted $\hat{\lambda}(w^*)$.
 
 ## Localizing the learning coefficient with SGLD
 
@@ -73,6 +73,6 @@ Equally revealing are episodes where $\hat{\lambda}(w_t)$ decreases even while t
 
 ---
 
-Taken together, these ideas replace static parameter counting with a geometric account of training. Raw parameter count $d$ fails on overparameterized networks because symmetries and redundant units fill parameter space with flat troughs and intersecting zero-loss surfaces where the Fisher information matrix is singular. Watanabe's Real Log Canonical Threshold $\lambda$ replaces coordinate counting with sublevel volume scaling in the free energy, explaining why compact circuits dominate posterior mass and emerge through phase transitions. Finally, the Local Learning Coefficient $\hat{\lambda}(w_t)$ turns this geometric invariant into a practical measurement across checkpoints, letting researchers track when internal structure forms, competes, and compresses during training.
+Taken together across [Part I](/blog/slt-part-i), [Part II](/blog/slt-part-ii), and Part III, these ideas replace static parameter counting with a geometric account of training. Raw parameter count $d$ fails on overparameterized networks because symmetries and redundant units fill parameter space with flat troughs and intersecting zero-loss surfaces where the Fisher information matrix is singular. Watanabe's Real Log Canonical Threshold $\lambda$ replaces coordinate counting with sublevel volume scaling in the free energy, explaining why compact circuits dominate posterior mass and emerge through phase transitions. Finally, the Local Learning Coefficient $\hat{\lambda}(w_t)$ turns this geometric invariant into a practical measurement across checkpoints, letting researchers track when internal structure forms, competes, and compresses during training.
 
 [^1]: In practice, numerical estimates of $\hat{\lambda}(w^*)$ depend on the choice of localization stiffness $\gamma$, inverse temperature $\beta$, and SGLD hyperparameters such as step size and chain length. Practitioners therefore rarely interpret a single isolated estimate as an exact parameter count; instead, they hold these hyperparameters fixed across a run and track relative rises, plateaus, and drops in $\hat{\lambda}(w_t)$ over training.
