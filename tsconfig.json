@@ -7,11 +7,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@blog/*": ["./src/blog/*"],
+      "@blog/*": ["./src/content/blog/*"],
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@pages/*": ["./src/pages/*"],
-      "@scripts/*": ["./src/scripts/*"],
       "@styles/*": ["./src/styles/*"]
     },
     "verbatimModuleSyntax": true,
